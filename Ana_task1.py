@@ -36,3 +36,44 @@ arr7 = np.concatenate([np.repeat(a, 3), np.tile(a, 3)])
 a = np.array([1, 2, 3, 2, 3, 4, 3, 4, 5, 6])
 b = np.array([7, 2, 10, 2, 7, 4, 9, 4, 9, 8])
 np.intersect1d(a, b)
+
+# Q12. From array a remove all items present in array b
+a = np.array([1, 2, 3, 4, 5])
+b = np.array([5, 6, 7, 8, 9])
+np.setdiff1d(a, b)
+
+# Q13. Get the positions where elements of a and b match
+a = np.array([1, 2, 3, 2, 3, 4, 3, 4, 5, 6])
+b = np.array([7, 2, 10, 2, 7, 4, 9, 4, 9, 8])
+np.where(a == b)
+
+# Q14. Get all items between 5 and 10 from a.
+a = np.array([2, 6, 1, 9, 10, 3, 27])
+a[(a >= 5) & (a <= 10)]
+
+# Q15. Convert the function maxx that works on two scalars, to work on two arrays.
+def maxx(x, y):
+    """Get the maximum of two items"""
+    if x >= y:
+        return x
+    else:
+        return y
+
+
+maxx(1, 5)
+
+def pair_max(a, b):
+    """Compare two arrays element-wise, return maximum"""
+    return np.where(a > b, a, b)
+
+
+a = np.array([5, 7, 9, 8, 6, 4, 5])
+b = np.array([6, 3, 4, 8, 9, 7, 1])
+pair_max(a, b)
+
+# Q16. Swap columns 1 and 2 in the array arr.
+arr8 = np.arange(9).reshape(3, 3)
+arr8[:, [1, 0, 2]]
+
+# Q17. Swap rows 1 and 2 in the array arr:
+arr8[[1, 0, 2], :]
