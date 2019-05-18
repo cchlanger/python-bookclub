@@ -18,3 +18,17 @@ arr.reshape((2,5))
 np.vstack([a,b])
 np.hstack([a,b])
 np.r_[np.repeat(a, 3), np.tile(a, 3)]
+#11. How to get the common items between two python numpy arrays?
+a = np.array([1,2,3,2,3,4,3,4,5,6])
+b = np.array([7,2,10,2,7,4,9,4,9,8])
+c=np.intersect1d(a,b) #not from the book
+c
+#12. How to remove from one array those items that exist in another?
+a = np.array([1,2,3,4,5])
+b = np.array([5,6,7,8,9])
+c = np.setdiff1d(a,b) #still didn't figure that out myself
+#13. How to get the positions where elements of two arrays match?
+a = np.array([1,2,3,2,3,4,3,4,5,6])
+b = np.array([7,2,10,2,7,4,9,4,9,8])
+c= np.where(a==b)
+c #still couldn't find the proper function
