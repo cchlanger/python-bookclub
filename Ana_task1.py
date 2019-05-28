@@ -77,3 +77,31 @@ arr8[:, [1, 0, 2]]
 
 # Q17. Swap rows 1 and 2 in the array arr:
 arr8[[1, 0, 2], :]
+
+# Q18. Reverse the rows of a 2D array arr.
+arr8[::-1, :]
+
+# Q19. Reverse the columns of a 2D array arr.
+arr8[:, ::-1]
+
+# Q20. Create a 2D array of shape 5x3 to contain random decimal numbers between 5 and 10.
+arr9 = np.random.uniform(5, 10, size=(5, 3))
+
+# Q21. Print or show only 3 decimal places of the numpy array rand_arr.
+np.set_printoptions(precision=3)
+print(arr9)
+
+# Q22. Pretty print rand_arr by suppressing the scientific notation (like 1e10)
+np.random.seed(100)
+rand_arr = np.random.random([3, 3])/1e3
+np.set_printoptions(suppress=True)
+print(rand_arr)
+
+# Q23. Limit the number of items printed in python numpy array a to a maximum of 6 elements.
+a = np.arange(15)
+np.set_printoptions(threshold=6)
+print(a)
+
+# Q24. Print the full numpy array a without truncating.
+np.set_printoptions(threshold=np.nan)
+print(a)
